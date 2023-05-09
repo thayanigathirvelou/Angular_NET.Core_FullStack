@@ -1,0 +1,144 @@
+<!-- Button trigger modal -->
+
+    <button type="button" style="margin-left:20px;" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+(click)="AddStudent()" data-keyborad="false">
+  Add Student
+</button>
+
+<div class="d-flex justify-content-center"></div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" style="width:1500px; height:800px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{modalTitle}}</h5>
+        
+      </div>
+      <div class="modal-body">
+        <!--<app-add-edit-stu [student]=ClickCounter (countChanged)="countChangedHandler($event)">
+        </app-add-edit-stu>-->
+        <!-- <app-add-edit-stu (outputFromChild)="getEmployees($event)" [employees]="employeesFromChild">
+
+        </app-add-edit-stu> -->
+        
+        <app-add-edit-stu *ngIf="popupenable" [student]="student" [Studentadd]="Studentadd" [popupenable]="popupenable" [content]="content"></app-add-edit-stu>
+      </div>
+      <div class="modal-footer">
+        <button type="button"  (click)="closeClick()" data-bs-dismiss="modal" aria-label="Close">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+          <th>Number</th>
+          <th>Full Name</th>
+          <th>Class</th>
+          <th>Options</th>
+      </tr>
+    </thead>
+    <tbody>
+       
+        <tr *ngFor="let dataItem of studentList;let i = index">
+        <td>{{i+1}}</td>
+
+        <td>{{dataItem.fullName}}</td>
+        <td>{{dataItem.class}}</td>
+        
+      
+      <td>
+
+
+      
+        
+        
+        <!--
+        <button type="button"  style="width:70px"class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2"
+        (click)="editStudent()" data-keyborad="false">
+          Edit 
+        </button>
+           
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModal2Label" aria-hidden="true">
+          <div class="modal-dialog modal-fullscreen-sm-down" style="width:1500px; height:800px;">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel2">{{modalTitle}}</h5>
+                <button type="button" class="btn-close" (click)="closeClick()" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <app-edit-stu (outputFromChild)="getEmployees($event)"></app-edit-stu>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        -->
+        
+       
+        
+         <!--   <a routerLink="/EditEmployee/{{dataItem.studentId}}">
+          <button class="btn btn-success pull-right" style="width:70px" >Edit</button>
+        </a> -->
+        <!--
+             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+        (click)="EditStudent(dataItem)">Edit</button>
+        -->
+        
+        <!-- <button type="button" style="margin-left:20px;" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2"
+        (click)="EditStudent(dataItem)" data-keyborad="false">
+          Edit
+        </button>
+        
+        <div class="d-flex justify-content-center"></div>
+        
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" style="width:1500px; height:800px;">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">{{modalTitle}}</h5>
+                <button type="button" class="btn-close" (click)="closeClick()" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+               
+            <app-edit-stu [student]="student"></app-edit-stu>
+          
+           
+            <app-edit-stu [student]="students" (outputFromChild)="(onChangeValue($event))"></app-edit-stu>
+           -->
+              
+        
+        
+                
+        <!--
+             </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+        (click)="EditStudent(dataItem)">Edit</button>
+      
+     
+        
+        <button type="button" style="margin-left:20px;" class="btn btn-primary" (click)="deleteClick(dataItem)">Delete</button>
+        
+     
+
+         
+      </td>
+    </tr>
+     
+ 
+     
+    </tbody>
+  </table>

@@ -1,0 +1,24 @@
+div  {
+    float: left;
+  }
+div a{
+    margin-right: 16px;
+    margin-left:20px;
+}
+
+
+.modal {
+  position: fixed;
+  top: 15%;
+  left: 430px;
+
+}
+  
+@media screen and (min-width: 676px) {
+  .modal-dialog {
+    max-width: 600px; /* New width for default modal */
+  }
+}
+
+
+    

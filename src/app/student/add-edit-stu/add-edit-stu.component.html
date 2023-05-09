@@ -1,0 +1,37 @@
+
+    <label>Student FullName</label>
+ 
+    <input type="text" class="form-control" [(ngModel)]="FullName"
+        placeholder="Enter Full Name" required>
+   
+
+
+    <label>Class</label>
+   
+    <input type="text" class="form-control" [(ngModel)]="Class"
+        placeholder="Enter Class" required>
+
+    <br>
+
+    
+   
+
+    <button (click)="addStudent()" *ngIf="Studentadd" class="btn btn-primary">
+        Add
+    </button>
+    
+    
+    <button (click)="Editstudent()" *ngIf="!Studentadd" class="btn btn-primary">
+        Update
+    </button>
+<!--
+    <button (click)="updateStudent()" *ngIf="student.StudentId!=0" class="btn btn-primary">
+    Update
+</button>
+
+-->
+
+
+
+
+

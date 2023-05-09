@@ -1,0 +1,21 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { ShowStuComponent } from './show-stu.component';
+
+describe('ShowStuComponent', () => {
+  let component: ShowStuComponent;
+  let fixture: ComponentFixture<ShowStuComponent>;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [ShowStuComponent]
+    });
+    fixture = TestBed.createComponent(ShowStuComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});
